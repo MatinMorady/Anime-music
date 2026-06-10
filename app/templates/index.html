@@ -1,24 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Anime Music</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-<h1>Anime Music Site</h1>
+{% block content %}
 
-<a href="/login">Login</a>
-<a href="/register">Register</a>
-<a href="/upload">Upload</a>
+<h1>Discover Anime Music</h1>
 
-<hr>
+<div class="song-grid">
 
 {% for song in songs %}
-    <div>
-        <p>{{ song.title }}</p>
-        <a href="/song/{{ song.id }}">Open</a>
-    </div>
+
+<div class="song-card">
+
+    <h3>{{ song.title }}</h3>
+
+    <a href="/song/{{ song.id }}">
+        Open
+    </a>
+
+</div>
+
 {% endfor %}
 
-</body>
-</html>
+</div>
+
+{% endblock %}
