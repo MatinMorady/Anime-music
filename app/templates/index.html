@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anime Music</title>
+</head>
+<body>
+
+<h1>Anime Music Site</h1>
+
+{% for song in songs %}
+    <div>
+        <p>{{ song.title }}</p>
+        <a href="/song/{{ song.id }}">Open</a>
+    </div>
+{% endfor %}
+
+</body>
+</html>
