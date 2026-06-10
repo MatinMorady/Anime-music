@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ song.title }}</h1>
+
+<p>Views: {{ song.views }}</p>
+
+<p>Likes: {{ likes }}</p>
+
+<a href="/download/{{ song.filename }}">
+    Download
+</a>
+
+<hr>
+
+<h3>Comments</h3>
+
+{% for comment in comments %}
+<p>{{ comment.text }}</p>
+{% endfor %}
+
+<form method="POST" action="/comment/{{ song.id }}">
+
+    <input
+        type="text"
+        name="text"
+        placeholder="Write comment"
+        required
+    >
+
+    <button type="submit">
+        Comment
+    </button>
+
+</form>
+
+{% endblock %}
