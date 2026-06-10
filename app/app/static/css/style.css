@@ -1,0 +1,39 @@
+body{
+    margin:0;
+    background:#121212;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.navbar{
+    background:#000;
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.nav-links a{
+    color:white;
+    margin-left:15px;
+    text-decoration:none;
+}
+
+.container{
+    padding:20px;
+}
+
+.song-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:20px;
+}
+
+.song-card{
+    background:#181818;
+    padding:15px;
+    border-radius:12px;
+}
+
+.song-card:hover{
+    background:#252525;
+}
